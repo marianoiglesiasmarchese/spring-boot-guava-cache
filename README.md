@@ -1,7 +1,7 @@
-# spring-boot-guava/caffeine-cache
-Simple spring boot guava/caffeine cache
+# spring-boot-guava-[caffeine]-cache
+Simple spring boot guava-[caffeine] cache
 
-Guava support is no longer supported and replaced by Caffeine that supersedes support for Guava.
+Guava support is no longer available, it was replaced by Caffeine that supersedes support for Guava.
 
 ## links of interest
 
