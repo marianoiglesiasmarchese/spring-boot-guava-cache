@@ -1,28 +1,26 @@
 package com.cache.guava.config
 
-import com.github.benmanes.caffeine.cache.Caffeine
-import org.springframework.cache.CacheManager
 import org.springframework.cache.annotation.EnableCaching
-import org.springframework.cache.caffeine.CaffeineCacheManager
-import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
-import java.util.concurrent.TimeUnit
 
 @Configuration
 @EnableCaching
 class CacheConfig {
 
-    @Bean
-    fun cacheManager(): CacheManager {
-        val caffeineCacheManager = CaffeineCacheManager()
-        caffeineCacheManager.setCaffeine(
-            Caffeine.newBuilder()
-                .expireAfterWrite(1, TimeUnit.MINUTES)
-                .initialCapacity(100)
-                .recordStats()
-        )
-        return caffeineCacheManager
-    }
+    /**
+     * Caffeine cache manager programmatic configuration
+     */
+//    @Bean
+//    fun cacheManager(): CacheManager {
+//        val caffeineCacheManager = CaffeineCacheManager()
+//        caffeineCacheManager.setCaffeine(
+//            Caffeine.newBuilder()
+//                .expireAfterWrite(1, TimeUnit.MINUTES)
+//                .initialCapacity(100)
+//                .recordStats()
+//        )
+//        return caffeineCacheManager
+//    }
 
 //    /**
 //     * default configuration, 1 hours expired, maximum 1000
